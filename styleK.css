@@ -1,0 +1,289 @@
+.logo_brand {
+    height: 42px;
+    width: auto;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    /* font-family: 'Kanit', sans-serif; */
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 78px;
+    /* background: linear-gradient(to bottom, #ffffff, #73EC8B, #54C392, #15B392); */
+    padding: 6px 14px;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active {
+    width: 240px;
+}
+
+.sidebar .logo_content .logo {
+    color: #ffffff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active .logo_content .logo {
+    opacity: 1;
+    pointer-events: none;
+}
+
+.logo_content .logo .logo_brand {
+    /* font-size: 28px; */
+    margin-right: 10px;
+}
+
+.logo_content {
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 10px;
+}
+
+
+.logo_content .logo .logo_name {
+    font-size: 22px;
+    font-weight: 1000;
+}
+
+.sidebar #Btn {
+    position: absolute;
+    color: #ffffff;
+    top: 6px;
+    left: 50%;
+    font-size: 28px;
+    border-radius: 12px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+    transition: all 0.4s ease-in;
+}
+
+.sidebar.active #Btn {
+    left: 87%;
+}
+
+.sidebar #Btn:hover {
+    background: #ffffff;
+    color: #11101d;
+    transition: all 0.4s ease-out;
+}
+
+.sidebar ul {
+    margin-top: 20px;
+    padding: 0;
+}
+
+@keyframes blink {
+    0% {
+        background-color: #ffffff;
+        /* White background */
+    }
+
+    50% {
+        background-color: #FF4545;
+    }
+
+    100% {
+        background-color: #ffffff;
+    }
+}
+
+.sidebar .nav_now {
+    border-radius: 12px;
+    background: #ffffff;
+    animation: blink 2s infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+.sidebar .nav_now a {
+    color: #11101d !important;
+}
+
+.sidebar .nav_now a:hover {
+    color: #fff !important;
+    background: #11101d !important;
+}
+
+.sidebar ul li {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin: 0px;
+    list-style: none;
+}
+
+.sidebar ul li a {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+}
+
+.sidebar ul li i {
+    font-size: 28px;
+}
+
+.links_name {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+.sidebar ul li a:hover {
+    color: #11101d;
+    background: #ffffff;
+}
+
+.sidebar ul li i {
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.sidebar .links_name {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active .links_name {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sidebar .profile_content {
+    position: absolute;
+    color: #ffffff;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.sidebar .profile_content .profile {
+    position: relative;
+    padding: 10px 6px;
+    height: 60px;
+    background: #FF4545;
+    transition: all 0.4s ease;
+}
+
+.sidebar.active .profile_content .profile {
+    background: #FF4545;
+}
+
+.sidebar .nav_list_setting {
+    padding-top: 220px;
+}
+
+.sidebar .nav_list_setting i {
+    font-size: 32px;
+}
+
+.profile_content .profile .profile_details {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    transition: all 0.4s ease;
+}
+
+.sidebar.active .profile .profile_details {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.profile .profile_details img {
+    width: 40px;
+    height: auto;
+    object-fit: cover;
+    margin-left: 5px;
+    border-radius: 12px;
+}
+
+.profile .profile_details .name_role {
+    margin-left: 10px;
+}
+
+.profile .profile_details .name {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.profile .profile_details .role {
+    font-size: 12px;
+}
+
+.profile #log_out {
+    position: absolute;
+    color: #ffffff;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 50px;
+    line-height: 50px;
+    font-size: 28px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.5s ease;
+    background: #FF4545;
+}
+
+.sidebar .profile #log_out:hover {
+    background: #ffffff;
+    color: #11101d;
+    transition: all 0.4s ease;
+}
+
+.sidebar.active .profile #log_out {
+    left: 87%;
+}
+
+/* .sidebar.active .profile #log_out {
+    background: none;
+} */
+
+.home_content {
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 78px);
+    left: 78px;
+    transition: all 0.5s ease;
+}
+
+/* .navbar {
+    padding: 14px;
+} */
+
+/* .home_content .text {
+    font-size: 25px;
+    font-weight: 500;
+    color: #11101d;
+    margin: 12px;
+} */
+
+.sidebar.active~.home_content {
+    width: calc(100% - 240px);
+    left: 240px;
+
+}
